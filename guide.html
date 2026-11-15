@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panduan langkah demi langkah melakukan deployment website statis menggunakan GitHub Pages.">
+  <title>Tutorial GitHub Pages — Arief Budiman</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header"><nav class="nav container" aria-label="Navigasi utama">
+  <a class="brand" href="index.html"><span class="brand-mark">A.</span><span>Arief Budiman</span></a>
+  <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+  <div class="nav-links"><a href="index.html">Beranda</a><a href="materi.html">Materi Cloud</a><a href="portofolio.html">Portofolio Tugas</a><a class="active" href="guide.html">Tutorial GitHub Pages</a></div>
+</nav></header>
+<main>
+  <section class="page-hero container guide-hero">
+    <p class="eyebrow">03 / PANDUAN PRAKTIK</p>
+    <h1>Publikasikan website dengan <span>GitHub Pages.</span></h1>
+    <p class="lead">Ikuti panduan berikut untuk mengunggah website statis ke GitHub dan membuatnya dapat diakses secara online tanpa mengelola server sendiri.</p>
+    <div class="guide-meta"><span>⏱ Sekitar 10–20 menit</span><span>⌘ HTML, CSS, dan JavaScript</span><span>☁ Hosting website statis</span></div>
+  </section>
+
+  <section class="container content-section">
+    <div class="guide-callout reveal"><strong>Sebelum memulai</strong><p>Siapkan akun GitHub dan folder website yang sudah berisi file HTML, CSS, JavaScript, serta aset pendukung seperti gambar. Pastikan halaman utama bernama <code>index.html</code>.</p></div>
+  </section>
+
+  <section class="container content-section guide-steps">
+    <article class="guide-step reveal"><div class="guide-step-number">01</div><div class="guide-step-content"><span class="section-kicker">LANGKAH PERTAMA</span><h2>Buat repository di GitHub</h2><p>Masuk ke <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>, kemudian login ke akun kamu. Klik tombol <b>New repository</b> untuk membuat tempat penyimpanan file website.</p><ul><li>Isi nama repository, misalnya <code>website-komputasi-awan</code>.</li><li>Pilih <b>Public</b> agar repository dapat digunakan dengan GitHub Free.</li><li>Klik <b>Create repository</b>.</li></ul><p class="guide-note">Untuk website proyek, nama repository tidak harus menggunakan format <code>username.github.io</code>. Format tersebut digunakan untuk website utama akun atau organisasi.</p></div></article>
+
+    <article class="guide-step reveal"><div class="guide-step-number">02</div><div class="guide-step-content"><span class="section-kicker">UNGGAH FILE WEBSITE</span><h2>Upload seluruh file proyek</h2><p>Buka repository yang baru dibuat, pilih <b>Add file → Upload files</b>, lalu unggah seluruh isi folder website.</p><ul><li>Pastikan <code>index.html</code> berada di direktori utama repository.</li><li>Folder seperti <code>assets</code>, <code>css</code>, <code>js</code>, dan <code>images</code> tetap berada pada susunan folder yang benar.</li><li>Setelah proses unggah selesai, isi pesan commit, misalnya <code>Upload website awal</code>, lalu klik <b>Commit changes</b>.</li></ul><div class="guide-code"><span>Contoh susunan file</span><pre>website-komputasi-awan/
+├── index.html
+├── materi.html
+├── portofolio.html
+├── guide.html
+└── assets/
+    ├── css/
+    ├── js/
+    └── images/</pre></div></div></article>
+
+    <article class="guide-step reveal"><div class="guide-step-number">03</div><div class="guide-step-content"><span class="section-kicker">KONFIGURASI DEPLOYMENT</span><h2>Aktifkan GitHub Pages</h2><p>Di halaman repository, buka menu <b>Settings</b>. Pada bagian sidebar <b>Code and automation</b>, pilih <b>Pages</b>.</p><p>Pada bagian <b>Build and deployment</b>, atur konfigurasi berikut:</p><div class="guide-settings"><div><small>Source</small><strong>Deploy from a branch</strong></div><div><small>Branch</small><strong>main</strong></div><div><small>Folder</small><strong>/(root)</strong></div></div><p>Setelah itu, klik <b>Save</b>. GitHub Pages akan mengambil file website dari branch <code>main</code> dan direktori utama repository.</p></div></article>
+
+    <article class="guide-step reveal"><div class="guide-step-number">04</div><div class="guide-step-content"><span class="section-kicker">CEK HASIL PUBLIKASI</span><h2>Buka website yang sudah online</h2><p>Kembali ke menu <b>Settings → Pages</b>. Setelah proses deployment berhasil, GitHub akan menampilkan alamat website dan tombol <b>Visit site</b>.</p><p>Untuk repository proyek, alamat umumnya menggunakan format:</p><div class="guide-url">https://username.github.io/nama-repository/</div><p>Ganti <code>username</code> dan <code>nama-repository</code> dengan nama akun serta repository milikmu. Jika website belum tampil, tunggu beberapa menit dan periksa status proses pada tab <b>Actions</b>.</p></div></article>
+
+    <article class="guide-step reveal"><div class="guide-step-number">05</div><div class="guide-step-content"><span class="section-kicker">PEMBARUAN WEBSITE</span><h2>Perbarui konten website</h2><p>Jika ingin mengubah isi website, buka file yang ingin diperbarui di repository, klik ikon edit, lakukan perubahan, lalu pilih <b>Commit changes</b>. Kamu juga dapat mengunggah ulang file yang sudah diperbarui.</p><p>GitHub Pages akan menjalankan deployment kembali setelah perubahan masuk ke branch sumber. Buka lagi URL website untuk memeriksa hasil pembaruan. Jika tampilan lama masih muncul, coba muat ulang halaman dengan <code>Ctrl + F5</code>.</p></div></article>
+  </section>
+
+  <section class="container content-section"><div class="section-heading"><span class="section-kicker">CATATAN PENTING</span><h2>Hal yang perlu diperhatikan.</h2></div><div class="guide-warning-grid"><article class="info-panel reveal"><h3>Website statis</h3><p>GitHub Pages cocok untuk file HTML, CSS, JavaScript, dan aset statis. GitHub Pages tidak menjalankan backend seperti PHP, Python, atau database secara langsung.</p></article><article class="info-panel reveal"><h3>Keamanan informasi</h3><p>Website yang dipublikasikan dapat diakses melalui internet. Jangan mengunggah password, token API, data pribadi sensitif, atau informasi rahasia ke repository maupun halaman website.</p></article></div></section>
+
+  <section class="container note-banner reveal"><div><span class="eyebrow">DOKUMENTASI RESMI</span><h2>Pelajari GitHub Pages lebih lanjut.</h2><p>Gunakan dokumentasi resmi GitHub untuk memahami pilihan sumber publikasi dan pengaturan lanjutan.</p></div><a class="btn light" href="https://docs.github.com/en/pages/quickstart" target="_blank" rel="noopener">Buka dokumentasi ↗</a></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>© 2026 Arief Budiman</span><span>Dibuat untuk Tugas Komputasi Awan</span></div></footer>
+<script src="assets/js/main.js"></script>
+</body></html>
